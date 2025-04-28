@@ -7,5 +7,14 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: './', // Add base path for GitHub Pages deployment
+  base: './', // Base path for GitHub Pages deployment
+  build: {
+    assetsDir: 'assets', // Place assets in a specific directory
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    }
+  },
 });
